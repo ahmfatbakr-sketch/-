@@ -52,6 +52,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ lang, onSelect
                 <div className="relative h-56 sm:h-64 overflow-hidden bg-slate-200">
                   <img
                     src={service.image}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('public')) {
+                        target.src = '/images/service_carpet_steam.jpg';
+                      }
+                    }}
                     alt={isAr ? service.titleAr : service.titleEn}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"

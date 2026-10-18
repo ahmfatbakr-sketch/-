@@ -1,4 +1,5 @@
 import { ServiceItem, ReviewItem, DistrictItem, FaqItem } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const BUSINESS_INFO = {
   nameAr: 'شركة تنظيف بالبخار بجدة الأفضل كلين',
@@ -46,7 +47,7 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 150,
     unitAr: 'طقم كنب كامل',
     unitEn: 'complete sofa set',
-    image: '/src/assets/images/service_majlis_cleaning_1792269952416.jpg',
+    image: IMAGES.majlis,
     popular: true,
   },
   {
@@ -70,7 +71,7 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 120,
     unitAr: 'سجادة متوسطة',
     unitEn: 'medium carpet',
-    image: '/src/assets/images/service_carpet_steam_1792269951386.jpg',
+    image: IMAGES.carpet,
     popular: true,
   },
   {
@@ -94,7 +95,7 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 450,
     unitAr: 'شقة سكنية',
     unitEn: 'residential apartment',
-    image: '/src/assets/images/service_villa_deep_clean_1792269952190.jpg',
+    image: IMAGES.villa,
   },
   {
     id: 'mattress-curtains',
@@ -117,7 +118,7 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 90,
     unitAr: 'مرتبة فردية',
     unitEn: 'single mattress',
-    image: '/src/assets/images/hero_steam_cleaning_1792269951006.jpg',
+    image: IMAGES.hero,
   },
   {
     id: 'marble-tile',
@@ -140,7 +141,7 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 200,
     unitAr: 'مساحة 30 متر مربع',
     unitEn: '30 sq. meter area',
-    image: '/src/assets/images/service_villa_deep_clean_1792269952190.jpg',
+    image: IMAGES.villa,
   },
   {
     id: 'water-tanks',
@@ -163,7 +164,7 @@ export const SERVICES: ServiceItem[] = [
     startingPrice: 250,
     unitAr: 'خزان أرضي أو علوي',
     unitEn: 'underground or rooftop tank',
-    image: '/src/assets/images/service_carpet_steam_1792269951386.jpg',
+    image: IMAGES.carpet,
   },
 ];
 

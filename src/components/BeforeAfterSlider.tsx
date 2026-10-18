@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Sparkles, MoveHorizontal, CheckCircle2 } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 import { Language } from '../types';
 
 interface BeforeAfterSliderProps {
@@ -74,7 +75,13 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({ lang }) =>
             {/* Background Image: Clean (After) State */}
             <div className="absolute inset-0 w-full h-full">
               <img
-                src="/src/assets/images/service_carpet_steam_1792269951386.jpg"
+                src={IMAGES.carpet}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('public')) {
+                    target.src = '/images/service_carpet_steam.jpg';
+                  }
+                }}
                 alt="After Steam Cleaning"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -93,7 +100,13 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({ lang }) =>
             >
               <div className="relative w-full h-full">
                 <img
-                  src="/src/assets/images/service_carpet_steam_1792269951386.jpg"
+                  src={IMAGES.carpet}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes('public')) {
+                      target.src = '/images/service_carpet_steam.jpg';
+                    }
+                  }}
                   alt="Before Steam Cleaning"
                   className="w-full h-full object-cover filter brightness-75 sepia-[0.35] contrast-125"
                   style={{

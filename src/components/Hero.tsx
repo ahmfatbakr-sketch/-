@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MessageCircle, ShieldCheck, Flame, Clock, Award, Star, ArrowUpRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
+import { IMAGES } from '../assets/images';
 import { Language } from '../types';
 
 interface HeroProps {
@@ -115,7 +116,13 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenBooking }) => {
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-xl group">
               <img
-                src="/src/assets/images/hero_steam_cleaning_1792269951006.jpg"
+                src={IMAGES.hero}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('public')) {
+                    target.src = '/images/hero_steam_cleaning.jpg';
+                  }
+                }}
                 alt={isAr ? 'فني شركة الأفضل كلين أثناء تنظيف كنب بالبخار الحار في جدة' : 'Al-Afdal Cleaning technician steam cleaning upholstery in Jeddah'}
                 className="w-full h-full min-h-[300px] lg:min-h-[440px] object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
                 loading="eager"
